@@ -3,11 +3,9 @@
 import scraperwiki
 import requests
 from bs4 import BeautifulSoup
-import bs4
 import datetime
 import dateutil.parser
 import re
-import pandas as pd
 
 afl = requests.get("http://www.afl.com.au")
 
@@ -64,6 +62,4 @@ for p in players.keys():
 		player['year'] = datetime.datetime.now().year
 		data.append(player)
 
-df = pd.DataFrame(data)
-df.to_csv('players.csv',encoding='utf-8')
 scraperwiki.sqlite.save(unique_keys=["name","club","year"],data=data,table_name='players')

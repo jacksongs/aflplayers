@@ -3,6 +3,7 @@
 import scraperwiki
 import requests
 from bs4 import BeautifulSoup
+import bs4
 import datetime
 import dateutil.parser
 import re

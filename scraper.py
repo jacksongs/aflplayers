@@ -7,7 +7,7 @@ import datetime
 import dateutil.parser
 import re
 
-afl = requests.get("http://www.afl.com.au")
+afl = requests.get("http://www.afl.com.au/")
 
 aflsoup = BeautifulSoup(afl.content)
 

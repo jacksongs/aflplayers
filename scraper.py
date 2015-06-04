@@ -53,11 +53,11 @@ for p in players.keys():
 		tds = tr.find_all("td")
 		for i,td in enumerate(tds):
 			if i == 9:
-				player['glsyear'] = td.text
+				player['glsyear'] = td.text.strip()
 			elif i == 10:
-				player['glscareer'] = td.text
+				player['glscareer'] = td.text.strip()
 			else:
-				player[cats[i]] = td.text
+				player[cats[i]] = td.text.strip()
 		player['club'] = p
 		player['year'] = datetime.datetime.now().year
 		data.append(player)

@@ -58,7 +58,7 @@ for p in players.keys():
 				player['glscareer'] = td.text.strip()
 			else:
 				player[cats[i]] = td.text.strip()
-		player['club'] = p.split(" ")[-1]
+		player['club'] = p.replace(" ","-")
 		player['year'] = datetime.datetime.now().year
 		data.append(player)
 
